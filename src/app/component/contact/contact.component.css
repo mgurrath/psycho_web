@@ -1,0 +1,574 @@
+/* Contact Page Styles */
+.contact-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--white-secondary) 0%, var(--white-primary) 100%);
+}
+
+/* Hero Section */
+.contact-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+  margin-top: -80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--white-primary) 0%, var(--white-secondary) 50%, var(--brown-50) 100%);
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 600;
+  color: var(--brown-900);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: var(--brown-700);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-visual {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.organic-shape {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--brown-400) 0%, var(--brown-600) 100%);
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, var(--brown-300) 0%, var(--brown-500) 100%);
+  top: 40%;
+  right: 30%;
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--brown-200) 0%, var(--brown-400) 100%);
+  bottom: 20%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Container */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.title-decoration {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--brown-400) 0%, var(--brown-600) 100%);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+/* Introduction Section */
+.contact-intro {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.intro-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--brown-700);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Methods Grid */
+.contact-methods {
+  padding: 4rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  background: var(--white-primary);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--brown-100);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--brown-400) 0%, var(--brown-600) 100%);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-primary);
+}
+
+.phone-icon {
+  background: linear-gradient(135deg, var(--brown-500) 0%, var(--brown-700) 100%);
+}
+
+.email-icon {
+  background: linear-gradient(135deg, var(--brown-400) 0%, var(--brown-600) 100%);
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 1rem;
+}
+
+.contact-number,
+.contact-email {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brown-600);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-number:hover,
+.contact-email:hover {
+  color: var(--brown-800);
+}
+
+.card-description {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--brown-700);
+}
+
+/* Availability Section */
+.availability-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--white-secondary) 0%, var(--white-primary) 100%);
+  border-radius: 24px;
+  margin: 4rem 0;
+}
+
+.availability-content {
+  margin-top: 3rem;
+}
+
+.availability-info {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.availability-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--brown-700);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.opening-hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hours-card {
+  background: var(--white-primary);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--brown-100);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.hours-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.hours-card.closed {
+  opacity: 0.7;
+  background: var(--brown-50);
+}
+
+.hours-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--brown-200) 0%, var(--brown-300) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brown-700);
+  flex-shrink: 0;
+}
+
+.hours-card.closed .hours-icon {
+  background: linear-gradient(135deg, var(--brown-100) 0%, var(--brown-200) 100%);
+  color: var(--brown-500);
+}
+
+.hours-content h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 0.5rem;
+}
+
+.hours-time {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--brown-700);
+}
+
+.hours-card.closed .hours-time {
+  color: var(--brown-600);
+  font-style: italic;
+}
+
+/* Practice Information */
+.practice-info {
+  padding: 6rem 0;
+}
+
+.practice-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.practice-card {
+  background: var(--white-primary);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--brown-100);
+  text-align: center;
+}
+
+.practice-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--brown-400) 0%, var(--brown-600) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-primary);
+  margin: 0 auto 2rem;
+}
+
+.practice-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 1.5rem;
+}
+
+.address-details {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--brown-700);
+}
+
+.address-line {
+  margin-bottom: 0.5rem;
+}
+
+.address-line:last-child {
+  margin-bottom: 0;
+}
+
+.practice-info-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 1.5rem;
+}
+
+.practice-info-text p {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--brown-700);
+  margin-bottom: 1.5rem;
+}
+
+.practice-info-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.contact-cta {
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--brown-100) 0%, var(--brown-200) 100%);
+  border-radius: 24px;
+  margin-top: 4rem;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--brown-700);
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  min-width: 160px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brown-500) 0%, var(--brown-600) 100%);
+  color: var(--white-primary);
+  box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brown-700);
+  border: 2px solid var(--brown-300);
+}
+
+.btn-secondary:hover {
+  background: var(--brown-100);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-visual {
+    height: 300px;
+    order: -1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .opening-hours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-details {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hours-card {
+    padding: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 4rem 1rem;
+  }
+
+  .contact-container {
+    padding: 0 1rem 4rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .hours-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .practice-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .availability-section,
+  .practice-info {
+    padding: 4rem 0;
+  }
+
+  .contact-cta {
+    padding: 4rem 1rem;
+    border-radius: 16px;
+  }
+
+  .opening-hours-grid {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,67 @@
+<header class="header">
+  <nav class="navbar" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <a href="#home" class="logo-link" aria-label="Startseite">
+          <div class="logo-placeholder">
+            <span class="logo-text">Psychotherapie</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu" role="menubar">
+        <li class="nav-item" role="none">
+          <a routerLink="/" class="nav-link" role="menuitem">Start</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a routerLink="/about" class="nav-link" role="menuitem">Über mich</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a routerLink="/offer" class="nav-link" role="menuitem">Angebot</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a routerLink="/approach" class="nav-link" role="menuitem">Ansatz</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a routerLink="/contact" class="nav-link" role="menuitem">Kontakt</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="mobile-menu-btn"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="isMobileMenuOpen"
+        aria-label="Mobiles Menü öffnen"
+        type="button"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+      <ul class="mobile-nav-list" role="menu">
+        <li class="mobile-nav-item" role="none">
+          <a routerLink="/" class="mobile-nav-link" role="menuitem" (click)="closeMobileMenu()">Start</a>
+        </li>
+        <li class="mobile-nav-item" role="none">
+          <a routerLink="/about" class="mobile-nav-link" role="menuitem" (click)="closeMobileMenu()">Über mich</a>
+        </li>
+        <li class="mobile-nav-item" role="none">
+          <a routerLink="/offer" class="mobile-nav-link" role="menuitem" (click)="closeMobileMenu()">Angebot</a>
+        </li>
+        <li class="mobile-nav-item" role="none">
+          <a routerLink="/approach" class="mobile-nav-link" role="menuitem" (click)="closeMobileMenu()">Ansatz</a>
+        </li>
+        <li class="mobile-nav-item" role="none">
+          <a routerLink="/contact" class="mobile-nav-link" role="menuitem" (click)="closeMobileMenu()">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

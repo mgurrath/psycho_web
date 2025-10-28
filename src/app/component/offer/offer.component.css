@@ -1,0 +1,501 @@
+.offer-page {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--white-primary) 0%, var(--white-secondary) 100%);
+  min-height: 100vh;
+}
+
+.offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header Section */
+.offer-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.offer-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 600;
+  color: var(--brown-900);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.offer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brown-400) 0%, var(--brown-600) 100%);
+  border-radius: 2px;
+}
+
+.offer-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--brown-600);
+  margin: 2rem 0 0 0;
+  letter-spacing: 0.05em;
+}
+
+/* Main Content */
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Introduction */
+.offer-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--brown-700);
+  margin: 0;
+}
+
+/* Offer Categories */
+.offer-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.offer-category {
+  background: var(--white-primary);
+  border-radius: 24px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--brown-100);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.offer-category:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.category-header {
+  background: linear-gradient(135deg, var(--brown-50) 0%, var(--brown-100) 100%);
+  padding: 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--brown-100);
+}
+
+.category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--white-primary);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: var(--shadow-light);
+}
+
+.category-icon svg {
+  color: var(--brown-600);
+}
+
+.category-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin: 0 0 0.75rem 0;
+}
+
+.category-description {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  color: var(--brown-600);
+  margin: 0;
+}
+
+.category-items {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.offer-item {
+  padding: 2rem;
+  background: var(--white-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--brown-100);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.offer-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  background: var(--white-tertiary);
+}
+
+.offer-item.featured {
+  background: linear-gradient(135deg, var(--brown-50) 0%, var(--white-tertiary) 100%);
+  border-color: var(--brown-200);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 2rem;
+  background: var(--brown-600);
+  color: var(--white-primary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.item-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin: 0 0 1rem 0;
+}
+
+.item-description {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--brown-700);
+  margin: 0 0 1.5rem 0;
+}
+
+.item-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-item {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--brown-600);
+  background: var(--white-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--brown-200);
+}
+
+/* Practical Information */
+.practical-info {
+  background: var(--white-secondary);
+  padding: 4rem;
+  border-radius: 24px;
+  border: 1px solid var(--brown-100);
+}
+
+.info-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin: 0 0 3rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.info-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brown-400) 0%, var(--brown-600) 100%);
+  border-radius: 2px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background: var(--white-primary);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--brown-100);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--brown-100) 0%, var(--brown-200) 100%);
+  border-radius: 16px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.info-icon svg {
+  color: var(--brown-600);
+}
+
+.info-heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin: 0 0 1rem 0;
+}
+
+.info-text {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--brown-600);
+  margin: 0;
+}
+
+/* Call to Action */
+.offer-cta {
+  text-align: center;
+  padding: 4rem;
+  background: linear-gradient(135deg, var(--brown-50) 0%, var(--brown-100) 100%);
+  border-radius: 24px;
+  border: 1px solid var(--brown-200);
+}
+
+.cta-heading {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--brown-800);
+  margin: 0 0 1.5rem 0;
+}
+
+.cta-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--brown-700);
+  margin: 0 0 2.5rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .offer-page {
+    padding: 4rem 0;
+  }
+
+  .offer-content {
+    gap: 3rem;
+  }
+
+  .category-header {
+    padding: 2rem;
+  }
+
+  .category-items {
+    padding: 2rem;
+  }
+
+  .practical-info {
+    padding: 3rem;
+  }
+
+  .offer-cta {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-page {
+    padding: 3rem 0;
+  }
+
+  .offer-container {
+    padding: 0 1rem;
+  }
+
+  .offer-content {
+    gap: 2.5rem;
+  }
+
+  .category-header {
+    padding: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 1.75rem;
+  }
+
+  .category-description {
+    font-size: 1rem;
+  }
+
+  .category-items {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .offer-item {
+    padding: 1.5rem;
+  }
+
+  .item-title {
+    font-size: 1.375rem;
+  }
+
+  .practical-info {
+    padding: 2rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    padding: 2rem;
+  }
+
+  .offer-cta {
+    padding: 2.5rem;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-heading {
+    font-size: 1.75rem;
+  }
+
+  .cta-text {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-page {
+    padding: 2rem 0;
+  }
+
+  .offer-title {
+    font-size: 2rem;
+  }
+
+  .offer-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .intro-text {
+    font-size: 1.125rem;
+  }
+
+  .category-header {
+    padding: 1.25rem;
+  }
+
+  .category-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .category-items {
+    padding: 1.25rem;
+  }
+
+  .offer-item {
+    padding: 1.25rem;
+  }
+
+  .featured-badge {
+    left: 1rem;
+    font-size: 0.625rem;
+  }
+
+  .item-title {
+    font-size: 1.25rem;
+  }
+
+  .practical-info {
+    padding: 1.5rem;
+  }
+
+  .info-title {
+    font-size: 1.75rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .info-heading {
+    font-size: 1.375rem;
+  }
+
+  .info-text {
+    font-size: 0.95rem;
+  }
+
+  .offer-cta {
+    padding: 2rem;
+  }
+
+  .cta-heading {
+    font-size: 1.5rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+}
